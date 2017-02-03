@@ -1,0 +1,42 @@
+<div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="pet.name" class="form-control" id="name" placeholder="Meow" value="Meow"/>
+    </div>
+</div>
+<div class="form-group">
+    <label for="year" class="col-sm-2 control-label">img</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="pet.img" class="form-control" id="img" placeholder="http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg" value="http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg"/>
+
+    </div>
+</div>
+<div class="form-group">
+    <label for="director" class="col-sm-2 control-label">Pet Type</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="pet.petType" class="form-control" id="petType" placeholder="cat" value="cat"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="plot" class="col-sm-2 control-label">pet category</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="pet.categoryS" class="form-control" id="categoryS" placeholder="category2" value="category2" />
+    </div>
+</div>
+<div class="form-group">
+    <label for="plot" class="col-sm-2 control-label">pet status</label>
+    <div class="col-sm-10">
+    <select  class="form-control" ng-model="pet.status" id="status">
+        <option ng-repeat="sta in status">{{sta}}</option>
+    </select>
+<!-- <input type="text" ng-model="pet.status" class="form-control" id="status" placeholder="available" value="available"/>-->
+       
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" ng-disabled="!(pet.name && pet.img  && pet.petType && pet.categoryS && pet.status)" class="btn btn-primary" value="Save"/>
+    </div>
+</div>
